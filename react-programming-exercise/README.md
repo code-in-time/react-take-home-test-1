@@ -25,3 +25,4 @@ npm run start
 - https://codesandbox.io/s/laughing-moore-rrtqk
 - https://getbootstrap.com/docs/4.4/content/tables/
 - https://codesandbox.io/s/github/tannerlinsley/react-table/tree/master/examples/pagination
+- https://codesandbox.io/s/github/tannerlinsley/react-table/tree/master/examples/sorting
