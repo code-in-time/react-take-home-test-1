@@ -1,17 +1,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-let  Profile = require('./data/sensor_readings.json');
-// import axios from 'axios';
-
-debugger
-
-// axios.get('./data/sensor_readings.json')
-//   .then(res => console.log(res));
+import sensor_readings from './data/sensor_readings'
 
 class App extends Component {
 
   state = {
-    data: 'test'
+    data: sensor_readings
   }
 
   render() {
