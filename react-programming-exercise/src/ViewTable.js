@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { useTable, usePagination } from 'react-table'
+import { useTable, usePagination, useSortBy } from 'react-table'
 
 const Styles = styled.div`
   padding: 1rem;
@@ -41,6 +41,7 @@ function Table({ columns, data }) {
     getTableProps,
     getTableBodyProps,
     headerGroups,
+    rows,
     prepareRow,
     page, // Instead of using 'rows', we'll use page,
     // which has only the rows for the active page
@@ -61,6 +62,7 @@ function Table({ columns, data }) {
       data,
       initialState: { pageIndex: 2 },
     },
+    useSortBy,
     usePagination
   )
 
@@ -87,11 +89,22 @@ function Table({ columns, data }) {
           {headerGroups.map(headerGroup => (
             <tr {...headerGroup.getHeaderGroupProps()}>
               {headerGroup.headers.map(column => (
-                <th {...column.getHeaderProps()}>{column.render('Header')}</th>
+                <th {...column.getHeaderProps(column.getSortByToggleProps())}>
+                  {column.render('Header')}
+                  {/* Add a sort direction indicator */}
+                  <span>
+                    {column.isSorted
+                      ? column.isSortedDesc
+                        ? ' 🔽'
+                        : ' 🔼'
+                      : ''}
+                  </span>
+                </th>
               ))}
             </tr>
           ))}
         </thead>
+
         <tbody {...getTableBodyProps()}>
           {page.map((row, i) => {
             prepareRow(row)
@@ -104,6 +117,7 @@ function Table({ columns, data }) {
             )
           })}
         </tbody>
+
       </table>
       {/* 
         Pagination can be built however you'd like. 
