@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import sensor_readings from '../data/sensor_readings';
 import ViewTable from './ViewTable';
 import NewDataForm from './NewDataForm';
+import {cloneDeep} from 'lodash';
 
 class App extends Component {
 
@@ -10,12 +11,35 @@ class App extends Component {
     data: sensor_readings
   }
 
+  addNewData = (props) => {
+    debugger
+    const x = props;
+    const {id, box_id, sensor_type,range_l, range_u, longitude, latitude, reading, unit, reading_ts} = props;
+    // Clone the state data so that the base state is not mutated
+
+    const dataObj = cloneDeep(this.state.data);
+    // Add  the new data
+    // TODO: Add validation
+    dataObj.push({
+      id, box_id,
+      sensor_type,range_l,
+      range_u,
+      longitude,
+      latitude,
+      reading,
+      unit,
+      reading_ts
+    })
+    // Update the state
+    this.setState(dataObj)
+  }
+
   render() {
     return (
       <div>
         <ViewTable data={this.state.data} />
         <div>___________________________________________________________</div>
-        <NewDataForm />
+        <NewDataForm addNewData={this.addNewData.bind(this)} />
       </div>
     );
   }

@@ -10,22 +10,18 @@ import InputElm from './InputElm'
  * This form is used to add Data
  */
 
-/**
- * 
- * @param {Obj} values The data from the form
- */
-const onSubmit = async values => {
-  window.alert(JSON.stringify(values, 0, 2))
-}
 
 
+const NewDataForm = ({addNewData}) => {
+  /**
+   * 
+   * @param {Obj} values The data from the form
+   */
+  const onSubmit = async values => {
+    addNewData(values)
+  }
 
-
-
-
-const NewDataForm = () => (
-
-
+  return (
   <Form
     onSubmit={onSubmit}
     render={({ handleSubmit, form, submitting, pristine, values }) => (
@@ -61,5 +57,5 @@ const NewDataForm = () => (
     )}
   />
 )
-
+    }
 export default NewDataForm;
