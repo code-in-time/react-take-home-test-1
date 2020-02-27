@@ -1,9 +1,24 @@
-const initialState = 'VISIBILITY_FILTERS.ALL';
+import sensor_readings from '../data/sensor_readings';
+import {cloneDeep} from 'lodash';
 
-const sensorReducer = (state = initialState, action) => {
+// Actions
+export const ACTION_SENSORREDUCER_SAVE_ROW = 'ACTION_SENSORREDUCER_SAVE_ROW'
+
+// Reducer
+const initialState = {
+  data: cloneDeep(sensor_readings)
+};
+
+export default (state = initialState, action) => {
   switch (action.type) {
-    case 'SET_FILTER': {
-      return action.payload.filter;
+    case ACTION_SENSORREDUCER_SAVE_ROW: {
+      // Always clone state so that it does not mutate the state in the past
+      const state = cloneDeep(state)
+
+      // TODO: add the new data row
+      console.log('ssssssss')
+      debugger
+      return state;
     }
     default: {
       return state;
@@ -11,4 +26,10 @@ const sensorReducer = (state = initialState, action) => {
   }
 };
 
-export default sensorReducer;
+// Action creator
+export const actionSensorReducerSaveRow  = data => {
+  return {
+    type: ACTION_SENSORREDUCER_SAVE_ROW, 
+    payload: {data}
+  };
+}

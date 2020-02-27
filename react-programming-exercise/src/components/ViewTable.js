@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import { useTable, usePagination, useSortBy } from 'react-table'
+import { connect } from "react-redux";
+import sensorReducer from '../store'
 
 const Styles = styled.div`
   padding: 1rem;
@@ -227,4 +229,9 @@ function ViewTable(props) {
   )
 }
 
-export default ViewTable
+const mapStateToProps = state => ({
+  data: state.sensorReducer.data
+});
+
+
+export default connect(mapStateToProps)(ViewTable);

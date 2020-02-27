@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import sensor_readings from '../data/sensor_readings';
+
 import ViewTable from './ViewTable';
 import NewDataForm from './NewDataForm';
 import {cloneDeep} from 'lodash';
@@ -8,7 +8,7 @@ import {cloneDeep} from 'lodash';
 class App extends Component {
 
   state = {
-    data: sensor_readings
+    data: {}
   }
 
   addNewData = (props) => {
@@ -37,7 +37,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <ViewTable data={this.state.data} />
+        <ViewTable />
         <div>___________________________________________________________</div>
         <NewDataForm addNewData={this.addNewData.bind(this)} />
       </div>
