@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import sensor_readings from './data/sensor_readings';
+import sensor_readings from '../data/sensor_readings';
 import ViewTable from './ViewTable';
 import NewDataForm from './NewDataForm';
 
@@ -14,6 +14,7 @@ class App extends Component {
     return (
       <div>
         <ViewTable data={this.state.data} />
+        <div>___________________________________________________________</div>
         <NewDataForm />
       </div>
     );
