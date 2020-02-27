@@ -233,5 +233,4 @@ const mapStateToProps = state => ({
   data: state.sensorReducer.data
 });
 
-
 export default connect(mapStateToProps)(ViewTable);

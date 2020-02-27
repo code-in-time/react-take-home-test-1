@@ -1,5 +1,6 @@
 
-import React from 'react'
+import React from 'react';
+import { connect } from "react-redux";
 import { render } from 'react-dom'
 // import Styles from './Styles'
 import { Form, Field } from 'react-final-form'
@@ -58,4 +59,7 @@ const NewDataForm = ({addNewData}) => {
   />
 )
     }
-export default NewDataForm;
+//TODO: save data to the form call the reducer
+const mapDispatchToProps = {  };
+
+export default connect(null, mapDispatchToProps)(NewDataForm)
