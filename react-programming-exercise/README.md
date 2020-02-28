@@ -1,7 +1,25 @@
 # React test
 
-### An explanation of any design decisions you've made (e.g. choice of libs, why you left parts out?, how you could improve this further, etc).
+I have built the following in the time I have available.
+I wanted to get the the basic structure of the app running.
+I did the following in the test
+ - reads the records from the sensor_readings.json
+ - displays them in a tabular component (nothing too ugly)
+ - allows the user to sort data by time and sensor type
+ - allow user to enter new sensor data.
+ - plot a graph of sensor readings over time.
 
+ #### Here is a list of the main modules I used
+ - react
+-
+-
+-
+-
+-
+-
+-
+
+#### The following is still todo
 - Add config to turn off on production the redux dev tools
 - Write testsTest
 - Override bootstrap with custom styles
@@ -26,17 +44,17 @@
 -----------
 ### A brief guide on how to run the project.
 
-```
-cd ./react-programming-exercise
-```
+#### Install the modules
 ``` 
 npm install
 ```
+
+#### Run the application
 ``` 
 npm run start
 ```
 
-
+-----------
 ### Other notes
  #### Resources used
 - https://codesandbox.io/s/laughing-moore-rrtqk
@@ -49,3 +67,4 @@ npm run start
 - https://github.com/zalmoxisus/redux-devtools-extension
 - https://codesandbox.io/s/9on71rvnyo
 - http://recharts.org/en-US/guide/installation
+- https://www.npmjs.com/package/react-responsive-modal
