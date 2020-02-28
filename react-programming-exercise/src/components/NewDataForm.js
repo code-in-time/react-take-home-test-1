@@ -23,45 +23,45 @@ const NewDataForm = (props) => {
   }
 
   return (
-  <Form
-    onSubmit={onSubmit}
-    render={({ handleSubmit, form, submitting, pristine, values }) => (
-      <form onSubmit={handleSubmit}>
+    <Form
+      onSubmit={onSubmit}
+      render={({ handleSubmit, form, submitting, pristine, values }) => (
+        <form onSubmit={handleSubmit}>
 
-      <h2>Insert data into the form</h2>
+          <h2>Insert data into the form</h2>
 
-      <InputElm textVal={constValues.id} validate={required}/>
-      <InputElm textVal={constValues.box_id} validate={required}/>
-      <InputElm textVal={constValues.sensor_type} validate={required}/>
-      <InputElm textVal={constValues.range_l} validate={required}/>
-      <InputElm textVal={constValues.range_u} validate={required}/>
-      <InputElm textVal={constValues.longitude} validate={required}/>
-      <InputElm textVal={constValues.latitude} validate={required}/>
-      <InputElm textVal={constValues.reading} validate={required}/>
-      <InputElm textVal={constValues.reading_ts} validate={required}/>
-      <InputElm textVal={constValues.unit} validate={required}/>
+          <InputElm textVal={constValues.id} validate={required} />
+          <InputElm textVal={constValues.box_id} validate={required} />
+          <InputElm textVal={constValues.sensor_type} validate={required} />
+          <InputElm textVal={constValues.range_l} validate={required} />
+          <InputElm textVal={constValues.range_u} validate={required} />
+          <InputElm textVal={constValues.longitude} validate={required} />
+          <InputElm textVal={constValues.latitude} validate={required} />
+          <InputElm textVal={constValues.reading} validate={required} />
+          <InputElm textVal={constValues.reading_ts} validate={required} />
+          <InputElm textVal={constValues.unit} validate={required} />
 
-        <div className="buttons">
-          <button type="submit" disabled={submitting || pristine}>
-            Submit
+          <div className="buttons">
+            <button type="submit" disabled={submitting || pristine}>
+              Submit
         </button>
-          <button
-            type="button"
-            onClick={form.reset}
-            disabled={submitting || pristine}
-          >
-            Reset
+            <button
+              type="button"
+              onClick={form.reset}
+              disabled={submitting || pristine}
+            >
+              Reset
         </button>
-        </div>
-        <pre>{JSON.stringify(values, 0, 2)}</pre>
-      </form>
-    )}
-  />
-)
-    }
-//TODO: save data to the form call the reducer
-const mapDispatchToProps = { 
+          </div>
+          <pre>{JSON.stringify(values, 0, 2)}</pre>
+        </form>
+      )}
+    />
+  )
+}
+
+const mapDispatchToProps = {
   actionSensorReducerSaveRow
- };
+};
 
 export default connect(null, mapDispatchToProps)(NewDataForm)

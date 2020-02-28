@@ -20,6 +20,7 @@
 - The table refreshes when new data is added. Is this ok?
 - Write in angular - learn angular
 - Investigate warnings in the console
+- Improve the performance of the chart
 
 
 -----------
