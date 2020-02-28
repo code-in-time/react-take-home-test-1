@@ -9,6 +9,26 @@ I did the following in the test you sent me:
  - allow user to enter new sensor data.
  - plot a graph of sensor readings over time.
 
+
+-----------
+### A brief guide on how to run the project.
+
+#### Clone the application
+```
+git clone git@github.com:code-in-time/react-take-home-test-1.git
+```
+
+#### Install the modules
+``` 
+npm install
+```
+
+#### Run the application
+``` 
+npm run start
+```
+-----------
+
  #### Here is a list of the main modules I used
   - "bootstrap": "^4.4.1",
   - "final-form": "^4.18.7",
@@ -23,6 +43,8 @@ I did the following in the test you sent me:
   - "recharts": "^2.0.0-beta.1",
   - "redux": "^4.0.5",
   - "styled-components": "^5.0.1"
+
+-----------
 
 #### The following is still todo
 - Add config to turn off on production the redux dev tools
@@ -44,25 +66,8 @@ I did the following in the test you sent me:
 - Write in angular - learn angular
 - Investigate warnings in the console
 - Improve the performance of the chart
-
-
------------
-### A brief guide on how to run the project.
-
-#### Clone the application
-```
-git clone git@github.com:code-in-time/react-take-home-test-1.git
-```
-
-#### Install the modules
-``` 
-npm install
-```
-
-#### Run the application
-``` 
-npm run start
-```
+- Fix React.useMemo warning
+- Add more comments
 
 -----------
 ### Other notes

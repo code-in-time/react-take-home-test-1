@@ -10,7 +10,6 @@ import { required } from '../utils/formValidationHelpers';
 /**
  * This form is used to add Data
  */
-
 const NewDataForm = (props) => {
   /**
    * 
