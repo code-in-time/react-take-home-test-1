@@ -9,18 +9,14 @@ const Chart = ({data}) => {
   return (
     <div className="Chart">
       <LineChart
-        width={1500}
-        height={500}
-        data={data}
-        margin={{
-          top: 5, right: 30, left: 20, bottom: 5,
-        }}
+        width={500}
+        height={600}
+        data={data.slice(Math.max(data.length - 500, 0))}
       >
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="id" />
         <YAxis />
         <Tooltip />
-        <Legend />
         <Line type="monotone" dataKey="reading" stroke="#8884d8" />
       </LineChart>
     </div>
