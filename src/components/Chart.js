@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from "react-redux";
 import {
-  LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
+  LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip
 } from 'recharts';
 // http://recharts.org/en-US/examples
 
