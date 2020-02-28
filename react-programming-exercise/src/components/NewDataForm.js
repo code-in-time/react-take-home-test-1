@@ -1,8 +1,7 @@
 
 import React from 'react';
 import { connect } from "react-redux";
-import { render } from 'react-dom'
-import { Form, Field } from 'react-final-form'
+import { Form } from 'react-final-form'
 import { constValues } from '../utils/constValues'
 import InputElm from './InputElm'
 import { actionSensorReducerSaveRow } from '../store/sensorReducer'

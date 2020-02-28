@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import { useTable, usePagination, useSortBy } from 'react-table'
 import { connect } from "react-redux";
-import sensorReducer from '../store'
 
 const Styles = styled.div`
   padding: 1rem;
@@ -43,7 +42,7 @@ function Table({ columns, data }) {
     getTableProps,
     getTableBodyProps,
     headerGroups,
-    rows,
+    // rows,
     prepareRow,
     page, // Instead of using 'rows', we'll use page,
     // which has only the rows for the active page

@@ -36,7 +36,7 @@ npm run start
 
 
 ### Other notes
- #### Resourses used
+ #### Resources used
 - https://codesandbox.io/s/laughing-moore-rrtqk
 - https://getbootstrap.com/docs/4.4/content/tables/
 - https://codesandbox.io/s/github/tannerlinsley/react-table/tree/master/examples/pagination

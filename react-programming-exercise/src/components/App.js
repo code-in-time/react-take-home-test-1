@@ -1,9 +1,6 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-
+import React from 'react';
 import ViewTable from './ViewTable';
 import NewDataForm from './NewDataForm';
-import {cloneDeep} from 'lodash';
 
 const App = () => (
   <div className="App container-fluid">
