@@ -19,6 +19,7 @@
 - Clear form after save
 - The table refreshes when new data is added. Is this ok?
 - Write in angular - learn angular
+- Investigate warnings in the console
 
 
 -----------
