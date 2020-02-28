@@ -1,53 +1,70 @@
-# Angular Programming Exercise
+# React test
 
-Some environmental sensors have been deployed on the field.
-There are various types of sensors (CO, Temperature, O3, SO2, Humidity, …).
-Sensors are housed in boxes, and a box contains one sensor of each kind.
-Boxes have been placed at various locations.
-The sensor data has been collected in a JSON file with the following schema:
+I have built the following in the time I have available.
+I wanted to get the the basic structure of the app running.
+I did the following in the test
+ - reads the records from the sensor_readings.json
+ - displays them in a tabular component (nothing too ugly)
+ - allows the user to sort data by time and sensor type
+ - allow user to enter new sensor data.
+ - plot a graph of sensor readings over time.
 
-```json
-{
-  "id": "Box-A1-O3", // UUID for this sensor reading
-  "box_id": "Box-A1", // UUID of the box
-  "sensor_type": "O3", // type of the sensor
-  "name": "Ozone", // type of data read by sensor
-  "range_l": 0, // measuring range lower bound
-  "range_u": 1000, // measuring range upper bound
-  "longitude": -0.06507, // location of the box (lon)
-  "latitude": 51.51885, // location of the box (lat)
-  "reading": 817, // actual value being read
-  "unit": "ppm", // measurement unit
-  "reading_ts": "2019-09-10T00:00:00" // when the reading was taken
-}
+ #### Here is a list of the main modules I used
+ - react
+-
+-
+-
+-
+-
+-
+-
+
+#### The following is still todo
+- Add config to turn off on production the redux dev tools
+- Write testsTest
+- Override bootstrap with custom styles
+- Add animation transitions
+- Maybe this could be written in typescript to give better type checking
+- Get the data from a rest api
+- Add more detailed input validation
+- Make all styling the same mechanism either css or style components
+- Add a calendar control for the reading_ts input
+- Add error messages
+- Improve the UI experience
+- Improve responsiveness
+- Improve on layout
+- Each input requires its own unique regex rule to validate
+- Clear form after save
+- The table refreshes when new data is added. Is this ok?
+- Write in angular - learn angular
+- Investigate warnings in the console
+- Improve the performance of the chart
+
+
+-----------
+### A brief guide on how to run the project.
+
+#### Install the modules
+``` 
+npm install
 ```
 
-The file can be found in the data/ directory
+#### Run the application
+``` 
+npm run start
+```
 
-#### Basic Task
-
-Write an Angular application which
-
-1.  reads the records from the sensor_readings.json
-2.  displays them in a tabular component (nothing too ugly)
-3.  allows the user to sort data by time and sensor type
-
-#### Extra Tasks (two maximum)
-
-- allow user to enter new sensor data.
-- allows the user to filter data by sensor type/name.
-- plot a graph of sensor readings over time.
-- allow user to see sensor location on a map(use any lib google maps, openStreetMaps, openLayers, etc).
-- aggregate the data from all readings for the same sensor type, and compute the median of all its values. e.g
-
-| Box         | Sensor Type | Median | Unit |
-| ----------- | ----------- | ------ | ---- |
-| Box-A1-O3   | O3          | 321    | ppm  |
-| Box-A1-TEMP | TEMP        |        |      |
-
-#### Submission
-
-Please include with your submission:
-
-- An explanation of any design decisions you've made (e.g. choice of libs, why you left parts out?, how you could improve this further, etc).
-- A brief guide on how to run the project.
+-----------
+### Other notes
+ #### Resources used
+- https://codesandbox.io/s/laughing-moore-rrtqk
+- https://getbootstrap.com/docs/4.4/content/tables/
+- https://codesandbox.io/s/github/tannerlinsley/react-table/tree/master/examples/pagination
+- https://codesandbox.io/s/github/tannerlinsley/react-table/tree/master/examples/sorting
+- https://thoughtbot.com/blog/using-redux-with-react-hooks
+- https://github.com/erikras/ducks-modular-redux
+- https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en
+- https://github.com/zalmoxisus/redux-devtools-extension
+- https://codesandbox.io/s/9on71rvnyo
+- http://recharts.org/en-US/guide/installation
+- https://www.npmjs.com/package/react-responsive-modal
