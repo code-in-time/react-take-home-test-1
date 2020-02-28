@@ -2,24 +2,23 @@
 import React from 'react';
 import { connect } from "react-redux";
 import { render } from 'react-dom'
-// import Styles from './Styles'
 import { Form, Field } from 'react-final-form'
 import { constValues } from '../utils/constValues'
 import InputElm from './InputElm'
+import { actionSensorReducerSaveRow } from '../store/sensorReducer'
 
 /**
  * This form is used to add Data
  */
 
-
-
-const NewDataForm = ({addNewData}) => {
+const NewDataForm = (props) => {
   /**
    * 
    * @param {Obj} values The data from the form
    */
   const onSubmit = async values => {
-    addNewData(values)
+    console.log('values', values);
+    props.actionSensorReducerSaveRow(values);
   }
 
   return (
@@ -60,6 +59,8 @@ const NewDataForm = ({addNewData}) => {
 )
     }
 //TODO: save data to the form call the reducer
-const mapDispatchToProps = {  };
+const mapDispatchToProps = { 
+  actionSensorReducerSaveRow
+ };
 
 export default connect(null, mapDispatchToProps)(NewDataForm)
