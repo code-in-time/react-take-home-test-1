@@ -68,6 +68,7 @@ npm run start
 - Improve the performance of the chart
 - Fix React.useMemo warning
 - Add more comments
+- On the chart if there was to much data it was slow. Make it load quickly with all the records
 
 -----------
 ### Other notes

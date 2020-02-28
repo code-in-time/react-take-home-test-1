@@ -5,7 +5,7 @@ export const constValues = {
   sensor_type: 'sensor_type',
   range_l: 'range_l',
   range_u: 'range_u',
-  longitude: 'longitud',
+  longitude: 'longitude',
   latitude: 'latitude',
   reading: 'reading',
   unit: 'unit',
