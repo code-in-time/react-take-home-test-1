@@ -2,22 +2,23 @@
 
 ### An explanation of any design decisions you've made (e.g. choice of libs, why you left parts out?, how you could improve this further, etc).
 
-- Add config to turn off on production
-- Styling
-- Test
-- Overrive boot strap with Custom styles
-- add animation transtions
-- maybe t his could be written in tyle scrip to give better type checking
-- Write in angular
+- Add config to turn off on production the redux dev tools
+- Write testsTest
+- Override bootstrap with custom styles
+- Add animation transitions
+- Maybe this could be written in typescript to give better type checking
 - Get the data from a rest api
-- Add more detail input validation
-- Make all styling the same mechanism eather css or style componenets
-- Add a calanfdar control for the reading_ts input
+- Add more detailed input validation
+- Make all styling the same mechanism either css or style components
+- Add a calendar control for the reading_ts input
 - Add error messages
-- Improve t he UI experience
+- Improve the UI experience
 - Improve responsiveness
 - Improve on layout
-- each input requires its own unique regex rule to validate
+- Each input requires its own unique regex rule to validate
+- Clear form after save
+- The table refreshes when new data is added. Is this ok?
+- Write in angular - learn angular
 
 
 -----------

@@ -62,7 +62,7 @@ function Table({ columns, data }) {
     {
       columns,
       data,
-      initialState: { pageIndex: 2 },
+      initialState: { pageIndex: 0 },
     },
     useSortBy,
     usePagination
@@ -71,6 +71,7 @@ function Table({ columns, data }) {
   // Render the UI for your table
   return (
     <>
+      {/* 
       <pre>
         <code>
           {JSON.stringify(
@@ -86,6 +87,7 @@ function Table({ columns, data }) {
           )}
         </code>
       </pre>
+      */}
       <table {...getTableProps()}>
         <thead>
           {headerGroups.map(headerGroup => (

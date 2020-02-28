@@ -20,6 +20,7 @@ const NewDataForm = (props) => {
   const onSubmit = async values => {
     console.log('values', values);
     props.actionSensorReducerSaveRow(values);
+    alert('saved click on [>>] to see the last page in the form')
   }
 
   return (
