@@ -6,6 +6,7 @@ import { Form, Field } from 'react-final-form'
 import { constValues } from '../utils/constValues'
 import InputElm from './InputElm'
 import { actionSensorReducerSaveRow } from '../store/sensorReducer'
+import { required } from '../utils/formValidationHelpers';
 
 /**
  * This form is used to add Data
@@ -29,16 +30,16 @@ const NewDataForm = (props) => {
 
       <h2>Insert data into the form</h2>
 
-      <InputElm textVal={constValues.id} />
-      <InputElm textVal={constValues.box_id} />
-      <InputElm textVal={constValues.sensor_type} />
-      <InputElm textVal={constValues.range_l} />
-      <InputElm textVal={constValues.range_u} />
-      <InputElm textVal={constValues.longitude} />
-      <InputElm textVal={constValues.latitude} />
-      <InputElm textVal={constValues.reading} />
-      <InputElm textVal={constValues.reading_ts} />
-      <InputElm textVal={constValues.unit} />
+      <InputElm textVal={constValues.id} validate={required}/>
+      <InputElm textVal={constValues.box_id} validate={required}/>
+      <InputElm textVal={constValues.sensor_type} validate={required}/>
+      <InputElm textVal={constValues.range_l} validate={required}/>
+      <InputElm textVal={constValues.range_u} validate={required}/>
+      <InputElm textVal={constValues.longitude} validate={required}/>
+      <InputElm textVal={constValues.latitude} validate={required}/>
+      <InputElm textVal={constValues.reading} validate={required}/>
+      <InputElm textVal={constValues.reading_ts} validate={required}/>
+      <InputElm textVal={constValues.unit} validate={required}/>
 
         <div className="buttons">
           <button type="submit" disabled={submitting || pristine}>

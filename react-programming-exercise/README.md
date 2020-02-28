@@ -15,6 +15,9 @@
 - Add a calanfdar control for the reading_ts input
 - Add error messages
 - Improve t he UI experience
+- Improve responsiveness
+- Improve on layout
+- each input requires its own unique regex rule to validate
 
 
 -----------

@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
 import { Field } from 'react-final-form'
 
-function InputElm({textVal}) {
+function InputElm({textVal, validate}) {
 
   return (
     <div className="InputElm form-group"> 
-      <label for={textVal} className="font-weight-bold">{textVal}</label>
-      <Field
-        id={textVal}
-        name={textVal}
-        component="input"
-        type="text"
-        placeholder=""
-        className="form-control"
-      />
+    <Field name={textVal} validate={validate}>
+      {({ input, meta }) => (
+        <div>
+          <label htmlFor={textVal} className="font-weight-bold">{textVal}</label>
+          <input {...input} type="text" placeholder="" id={textVal} name={textVal} className="form-control" />
+          {meta.error && meta.touched && <span className="text-danger">{meta.error}</span>}
+        </div>
+      )}
+    </Field>
   </div>
   );
 }
