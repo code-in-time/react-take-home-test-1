@@ -11,6 +11,10 @@
 - Write in angular
 - Get the data from a rest api
 - Add more detail input validation
+- Make all styling the same mechanism eather css or style componenets
+- Add a calanfdar control for the reading_ts input
+- Add error messages
+- Improve t he UI experience
 
 
 -----------

@@ -4,14 +4,16 @@ import { Field } from 'react-final-form'
 function InputElm({textVal}) {
 
   return (
-    <div> 
+    <div className="InputElm form-group"> 
+      <label for={textVal} className="font-weight-bold">{textVal}</label>
       <Field
+        id={textVal}
         name={textVal}
         component="input"
         type="text"
-        placeholder={textVal}
+        placeholder=""
+        className="form-control"
       />
-      <label><strong>{textVal}</strong></label>
   </div>
   );
 }
