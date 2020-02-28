@@ -47,3 +47,4 @@ npm run start
 - https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en
 - https://github.com/zalmoxisus/redux-devtools-extension
 - https://codesandbox.io/s/9on71rvnyo
+- http://recharts.org/en-US/guide/installation
