@@ -10,9 +10,15 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <ViewTable />
-        <NewDataForm />
+      <div className="App container-fluid">
+        <div className="row">
+          <div className="col">
+            <ViewTable />
+          </div>
+          <div className="col">
+            <NewDataForm /> 
+          </div>
+        </div>
       </div>
     );
   }

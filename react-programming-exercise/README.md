@@ -2,8 +2,15 @@
 
 ### An explanation of any design decisions you've made (e.g. choice of libs, why you left parts out?, how you could improve this further, etc).
 
-TODO: Add notes
-
+- Add config to turn off on production
+- Styling
+- Test
+- Overrive boot strap with Custom styles
+- add animation transtions
+- maybe t his could be written in tyle scrip to give better type checking
+- Write in angular
+- Get the data from a rest api
+- Add more detail input validation
 
 
 -----------
@@ -21,7 +28,7 @@ npm run start
 
 
 ### Other notes
-
+ #### Resourses used
 - https://codesandbox.io/s/laughing-moore-rrtqk
 - https://getbootstrap.com/docs/4.4/content/tables/
 - https://codesandbox.io/s/github/tannerlinsley/react-table/tree/master/examples/pagination
